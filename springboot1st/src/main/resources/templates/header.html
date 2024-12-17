@@ -1,0 +1,54 @@
+    <!DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <header class="header-wrapper main-header">
+        <div class="header-inner-wrapper" th:fragment="header">
+            <div class="logo-wrapper">
+                <a href="" class="admin-logo">
+                    <img src="static/picture/logo3.jpeg" alt="">
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="header-left">
+                    <div class="header-links">
+                        <a href="javascript:void(0);" class="toggle-btn">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-controls">
+
+                    <div class="user-info-wrapper header-links">
+                        <a href="javascript:void(0);" class="user-info">
+                            <img src="static/picture/user.jpg" alt="" class="user-img">
+                            <div class="blink-animation">
+                                <span class="blink-circle"></span>
+                                <span class="main-circle"></span>
+                            </div>
+                        </a>
+                        <div class="user-info-box">
+                            <meta charset="GBK">
+                            <div class="drop-down-header">
+                                <h4 th:text="${username}"></h4>
+                                <p>Welcome to the Library System!</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <form action="doLogout" method="post">
+<!--                                        <input type="text" th:name="${_csrf.getParameterName()}" th:value="${_csrf.token}" hidden>-->
+                                        <button type="submit">
+                                            <i class="fas fa-sign-out-alt"></i> logout
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <body>
+
+    </body>
+    </html>
